@@ -215,7 +215,7 @@ Standalone Python service exposing ML model predictions via FastAPI. Called inte
 
 ```
 ai_engine/
-├── app.py                          # FastAPI server entry point (Port 8000)
+├── main.py                          # FastAPI server entry point (Port 8000)
 ├── requirements.txt                # Python package dependencies
 │
 ├── models/                         # Trained ML model artifacts
@@ -300,25 +300,17 @@ AI_ENGINE_URL=http://localhost:8000
 ```bash
 cd backend
 npm install
-npm start
+npm run dev
 # ✅ API server running on http://localhost:5000
 ```
 
-### 4. Start the AI Engine
-
-```bash
-cd ai_engine
-pip install -r requirements.txt
-python app.py
-# ✅ AI engine running on http://localhost:8000
-```
 
 ### 5. Start the Frontend
 
 ```bash
 cd frontend
 npm install
-npm start
+npm run dev
 # ✅ App running on http://localhost:3000
 ```
 
@@ -423,6 +415,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ⭐ If KisanSetu brings value to you, please consider giving it a star!
 
-[GitHub](https://github.com/AdityaGade28/KisanSetu) &nbsp;•&nbsp; [Report Bug](https://github.com/AdityaGade28/KisanSetu/issues) &nbsp;•&nbsp; [Request Feature](https://github.com/AdityaGade28/KisanSetu/issues)
+[GitHub](https://github.com/AdityaGade28/KisanSetu) &nbsp;
 
 </div>
