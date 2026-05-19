@@ -1,0 +1,52 @@
+/* src/styles/theme.css */
+
+:root {
+  /* Primary palette */
+  --kisan-green: hsl(150, 65%, 40%);
+  --kisan-green-dark: hsl(150, 65%, 30%);
+  --kisan-green-light: hsl(150, 65%, 60%);
+  --kisan-bg: hsl(0, 0%, 100%);
+  --kisan-bg-dark: hsl(210, 10%, 10%);
+  --kisan-text: hsl(210, 10%, 10%);
+  --kisan-text-dark: hsl(0, 0%, 95%);
+  --kisan-card-bg: rgba(255, 255, 255, 0.8);
+  --kisan-card-bg-dark: rgba(30, 30, 30, 0.8);
+}
+
+[data-theme="dark"] {
+  --kisan-bg: var(--kisan-bg-dark);
+  --kisan-text: var(--kisan-text-dark);
+  --kisan-card-bg: var(--kisan-card-bg-dark);
+}
+
+html {
+  background-color: var(--kisan-bg);
+  color: var(--kisan-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Glassmorphism card utility */
+.kisan-card {
+  background: var(--kisan-card-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kisan-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark mode smooth transition for all elements */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
